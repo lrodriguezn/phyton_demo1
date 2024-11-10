@@ -8,12 +8,13 @@ print("4. Division")
 print("5. Modulo")
 print("6. Exponente")
 
-salir = False
+salir: bool = False
+error = False
 
 while not salir:
 
     seleccion = int(input("Teclee una numero y pulse Enter:\n"))
-    error = False
+
 
     match seleccion:
         case 1:
