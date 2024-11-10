@@ -9,7 +9,7 @@ print("5. Modulo")
 print("6. Exponente")
 
 salir: bool = False
-error = False
+error: bool = False
 
 while not salir:
 
