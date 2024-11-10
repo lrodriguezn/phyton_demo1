@@ -1,46 +1,60 @@
-# https://www.youtube.com/watch?v=3uBf0pZI3bI
-name = 'Luis GUSTAVO'
-last_name = '  rodriguez '
+print("---CALCULADORA MEJORADA---")
 
-print(name * 5 + ' ')
-print(name + ' ' + last_name)
-print(len(last_name))
+print("Hola, elija la opcion")
+print("1. Suma")
+print("2. Resta")
+print("3. Multiplicación")
+print("4. Division")
+print("5. Modulo")
+print("6. Exponente")
 
-print(name.lower())
-print(name.upper())
-print(last_name.upper().strip())
+salir = False
 
-x = 10
-y = 5.89
-is_true = True
-is_false = False
-# z = 1.2e6
-# a = 1.2e-6
-print(type(x))
-print(type(y))
-# print(z)
-# print(a)
+while not salir:
 
-print(x+x)
-print(x+y)
-print(is_true)
-print(type(is_true))
+    seleccion = int(input("Teclee una numero y pulse Enter:\n"))
+    error = False
 
-# operadores numericos
-a = 10
-b = 10
+    match seleccion:
+        case 1:
+            print("Ha elegido la opcion suma")
+        case 2:
+            print("Ha elegido la opcion resta")
+        case 3:
+            print("Ha elegido la opcion multiplicacion")
+        case 4:
+            print("Ha elegido la opcion division")
+        case 5:
+            print("Ha elegido la opcion modulo")
+        case 6:
+            print("Ha elegido la opcion exponente")
+        case 7:
+            print("Salir")
+            break
+        case _:
+            print("Opcion invalida")
+            error = True
 
-print("Suma: ", a + b)
-print("Resta: ", a - b)
-print("Multiplicacion: ", a * b)
-print("Potenciacion: ", a ** b)
-print("Division: ", a / b)
-print("Modulo: ", a % b)
-print("Parte entera Division: ", a // b)
+    if not error:
+        numero1 = float(input("ingrese numero1: "))
+        numero2 = float(input("ingrese numero2: "))
 
-
-print(a)
-print(a > b)
-print(a < b)
-print(a == b)
-
+        match seleccion:
+            case 1:
+                resultado = round(numero1 + numero2, 2)
+                print(f"La SUMA de {numero1} + {numero2} = {resultado}")
+            case 2:
+                resultado = round(numero1 - numero2, 2)
+                print(f"La RESTA de {numero1} - {numero2} = {resultado}")
+            case 3:
+                resultado = round(numero1 * numero2, 2)
+                print(f"La MULTIPLICACION de {numero1} * {numero2} = {resultado}")
+            case 4:
+                resultado = round(numero1 / numero2, 2)
+                print(f"La DIVISION de {numero1} / {numero2} = {resultado}")
+            case 5:
+                resultado = round(numero1 % numero2, 2)
+                print(f"El MODULO de {numero1} % {numero2} = {resultado}")
+            case 6:
+                resultado = round(numero1 ** numero2, 2)
+                print(f"El EXPONENTE de {numero1} ** {numero2} = {resultado}")
